@@ -1,0 +1,25 @@
+<header>
+    <h1>Bienvenue sur notre site</h1>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#liste-des-ouvrages">Liste des ouvrages</a>
+        <a href="#a-propos">A propos</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Choisissez une option :</h2>
+    <ul>
+        @for (book of bookList; track $index) {
+        <div class="book-card">
+            <span>{{book.titre}}</span>
+            <span>{{book.auteur}}</span>
+            <span>{{book.disponible}}</span>
+        </div>
+        }
+    </ul>
+</main>
+
+<footer>
+    <p>&copy; 2023 Mon Site Web</p>
+</footer>
